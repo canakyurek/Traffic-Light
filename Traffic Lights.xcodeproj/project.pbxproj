@@ -13,6 +13,7 @@
 		05E652232BC677560050B68D /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 05E652222BC677560050B68D /* Base */; };
 		05E652252BC677570050B68D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 05E652242BC677570050B68D /* Assets.xcassets */; };
 		05E652282BC677570050B68D /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 05E652272BC677570050B68D /* Base */; };
+		05E652312BC67A400050B68D /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 05E652302BC67A400050B68D /* SnapKit */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				05E652312BC67A400050B68D /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +85,9 @@
 			dependencies = (
 			);
 			name = "Traffic Lights";
+			packageProductDependencies = (
+				05E652302BC67A400050B68D /* SnapKit */,
+			);
 			productName = "Traffic Lights";
 			productReference = 05E652182BC677560050B68D /* Traffic Lights.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +116,9 @@
 				Base,
 			);
 			mainGroup = 05E6520F2BC677560050B68D;
+			packageReferences = (
+				05E6522F2BC67A400050B68D /* XCRemoteSwiftPackageReference "SnapKit" */,
+			);
 			productRefGroup = 05E652192BC677560050B68D /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -218,7 +226,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -275,7 +283,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -363,6 +371,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		05E6522F2BC67A400050B68D /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.7.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		05E652302BC67A400050B68D /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 05E6522F2BC67A400050B68D /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 05E652102BC677560050B68D /* Project object */;
 }
