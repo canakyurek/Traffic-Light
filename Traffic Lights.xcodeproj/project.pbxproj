@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		05E6521C2BC677560050B68D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05E6521B2BC677560050B68D /* AppDelegate.swift */; };
 		05E6521E2BC677560050B68D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05E6521D2BC677560050B68D /* SceneDelegate.swift */; };
-		05E652202BC677560050B68D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05E6521F2BC677560050B68D /* ViewController.swift */; };
+		05E652202BC677560050B68D /* BrandViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05E6521F2BC677560050B68D /* BrandViewController.swift */; };
 		05E652252BC677570050B68D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 05E652242BC677570050B68D /* Assets.xcassets */; };
 		05E652312BC67A400050B68D /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 05E652302BC67A400050B68D /* SnapKit */; };
 		05E652332BC67CE60050B68D /* Configurable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05E652322BC67CE60050B68D /* Configurable.swift */; };
@@ -23,7 +23,7 @@
 		05E652182BC677560050B68D /* Traffic Lights.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Traffic Lights.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		05E6521B2BC677560050B68D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		05E6521D2BC677560050B68D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		05E6521F2BC677560050B68D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		05E6521F2BC677560050B68D /* BrandViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrandViewController.swift; sourceTree = "<group>"; };
 		05E652242BC677570050B68D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		05E652292BC677570050B68D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		05E652322BC67CE60050B68D /* Configurable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configurable.swift; sourceTree = "<group>"; };
@@ -66,16 +66,48 @@
 			children = (
 				05E6521B2BC677560050B68D /* AppDelegate.swift */,
 				05E6521D2BC677560050B68D /* SceneDelegate.swift */,
-				05E6521F2BC677560050B68D /* ViewController.swift */,
+				05E6523F2BC685A80050B68D /* Controllers */,
 				05E652242BC677570050B68D /* Assets.xcassets */,
 				05E652292BC677570050B68D /* Info.plist */,
-				05E652322BC67CE60050B68D /* Configurable.swift */,
-				05E652342BC67D1E0050B68D /* TextFieldContainer.swift */,
-				05E652362BC680F40050B68D /* UITextField+Ext.swift */,
-				05E652382BC6823B0050B68D /* BaseViewController.swift */,
+				05E6523C2BC6858B0050B68D /* Protocol */,
+				05E6523E2BC6859E0050B68D /* Custom Views */,
+				05E6523D2BC685970050B68D /* Extensions */,
 				05E6523A2BC6846E0050B68D /* Constants.swift */,
 			);
 			path = "Traffic Lights";
+			sourceTree = "<group>";
+		};
+		05E6523C2BC6858B0050B68D /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				05E652322BC67CE60050B68D /* Configurable.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		05E6523D2BC685970050B68D /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				05E652362BC680F40050B68D /* UITextField+Ext.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		05E6523E2BC6859E0050B68D /* Custom Views */ = {
+			isa = PBXGroup;
+			children = (
+				05E652342BC67D1E0050B68D /* TextFieldContainer.swift */,
+			);
+			path = "Custom Views";
+			sourceTree = "<group>";
+		};
+		05E6523F2BC685A80050B68D /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				05E6521F2BC677560050B68D /* BrandViewController.swift */,
+				05E652382BC6823B0050B68D /* BaseViewController.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -153,7 +185,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				05E652202BC677560050B68D /* ViewController.swift in Sources */,
+				05E652202BC677560050B68D /* BrandViewController.swift in Sources */,
 				05E652372BC680F40050B68D /* UITextField+Ext.swift in Sources */,
 				05E652352BC67D1E0050B68D /* TextFieldContainer.swift in Sources */,
 				05E6521C2BC677560050B68D /* AppDelegate.swift in Sources */,

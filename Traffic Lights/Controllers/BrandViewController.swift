@@ -8,7 +8,7 @@
 import UIKit
 import SnapKit
 
-class ViewController: BaseViewController {
+class BrandViewController: BaseViewController {
     
     lazy var brandTextFieldContainer = TextFieldContainer().configure {
         $0.setPlaceholder(Constants.BrandView.placeholderTitle)
