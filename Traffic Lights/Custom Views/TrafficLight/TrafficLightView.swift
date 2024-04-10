@@ -17,13 +17,24 @@ class TrafficLightView: UIView {
         $0.alignment = .center
     }
     
+    /// Keeps an index for related stackView element
     private var animationIndex = 0
     
+    /// If false, recursive animation function is left.
     private var shouldAnimate = true
     
+    /// Class-scoped animation timer which populates with related item
     private weak var animationTimer: Timer?
     
+    /// Blinking animation duration
+    private var blinkDuration = 0.5
+    
+    /// Alpha component amount for the lights turned off
+    private var colorAlphaComponent = 0.2
+    
     private var lights: [LightModel] = []
+    
+    // MARK: - Inits
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -60,7 +71,7 @@ class TrafficLightView: UIView {
     
     private func drawLightView(_ color: UIColor) {
         let view = UIView()
-        view.backgroundColor = color.withAlphaComponent(0.2)
+        view.backgroundColor = color.withAlphaComponent(colorAlphaComponent)
         view.snp.makeConstraints { make in
             make.height.width.equalTo(64)
         }
@@ -71,7 +82,7 @@ class TrafficLightView: UIView {
     }
     
     private func blinkView(_ view: UIView, completion: @escaping () -> Void) {
-        UIView.animate(withDuration: 0.5) {
+        UIView.animate(withDuration: blinkDuration) {
             view.alpha = 0.0
         } completion: { _ in
             DispatchQueue.main.async {
@@ -85,27 +96,6 @@ class TrafficLightView: UIView {
         DispatchQueue.main.async { [weak self] in
             self?.animationTimer?.invalidate()
             self?.animationTimer = nil
-        }
-    }
-    
-    // MARK: - Selector
-    
-    @objc private func handleTimer() {
-        let view = stackView.arrangedSubviews[animationIndex]
-        let element = lights[animationIndex]
-        
-        blinkView(view) { [weak self] in
-            guard let self = self else { return }
-            
-            self.resetTimer()
-            view.backgroundColor = element.color.withAlphaComponent(0.2)
-            
-            self.animationIndex += 1
-            if self.animationIndex == self.lights.count {
-                self.animationIndex = 0
-            }
-            
-            self.animateWithTimer()
         }
     }
     
@@ -128,6 +118,27 @@ class TrafficLightView: UIView {
                 repeats: true
             )
             view.backgroundColor = element.color
+        }
+    }
+    
+    // MARK: - Selector
+    
+    @objc private func handleTimer() {
+        let view = stackView.arrangedSubviews[animationIndex]
+        let element = lights[animationIndex]
+        
+        blinkView(view) { [weak self] in
+            guard let self = self else { return }
+            
+            self.resetTimer()
+            view.backgroundColor = element.color.withAlphaComponent(colorAlphaComponent)
+            
+            self.animationIndex += 1
+            if self.animationIndex == self.lights.count {
+                self.animationIndex = 0
+            }
+            
+            self.animateWithTimer()
         }
     }
 }
