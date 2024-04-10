@@ -24,6 +24,7 @@
 		05E6524A2BC689D70050B68D /* DriveInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05E652492BC689D70050B68D /* DriveInteractor.swift */; };
 		05E6524C2BC689DE0050B68D /* DriveRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05E6524B2BC689DE0050B68D /* DriveRouter.swift */; };
 		05E6524E2BC689E60050B68D /* DriveConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05E6524D2BC689E60050B68D /* DriveConfigurator.swift */; };
+		05E652522BC691AF0050B68D /* TrafficLightView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05E652512BC691AF0050B68D /* TrafficLightView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +46,7 @@
 		05E652492BC689D70050B68D /* DriveInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriveInteractor.swift; sourceTree = "<group>"; };
 		05E6524B2BC689DE0050B68D /* DriveRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriveRouter.swift; sourceTree = "<group>"; };
 		05E6524D2BC689E60050B68D /* DriveConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriveConfigurator.swift; sourceTree = "<group>"; };
+		05E652512BC691AF0050B68D /* TrafficLightView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrafficLightView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +113,7 @@
 			isa = PBXGroup;
 			children = (
 				05E652342BC67D1E0050B68D /* TextFieldContainer.swift */,
+				05E652512BC691AF0050B68D /* TrafficLightView.swift */,
 			);
 			path = "Custom Views";
 			sourceTree = "<group>";
@@ -225,6 +228,7 @@
 				05E6524E2BC689E60050B68D /* DriveConfigurator.swift in Sources */,
 				05E652202BC677560050B68D /* BrandViewController.swift in Sources */,
 				05E6524C2BC689DE0050B68D /* DriveRouter.swift in Sources */,
+				05E652522BC691AF0050B68D /* TrafficLightView.swift in Sources */,
 				05E652372BC680F40050B68D /* UITextField+Ext.swift in Sources */,
 				05E652412BC6888A0050B68D /* DriveViewController.swift in Sources */,
 				05E652352BC67D1E0050B68D /* TextFieldContainer.swift in Sources */,
