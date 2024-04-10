@@ -9,8 +9,12 @@ import UIKit
 
 class DriveViewController: BaseViewController {
     
+    // MARK: - VIP cycle elements
+    
     var interactor: (DriveBusinessLogic & DriveDataStore)?
     var router: (DriveRoutingLogic & DriveDataPassing)?
+    
+    // MARK: - Lazy variables
     
     lazy var brandLabel = UILabel().configure {
         $0.font = .systemFont(ofSize: 24, weight: .bold)
@@ -18,7 +22,13 @@ class DriveViewController: BaseViewController {
         $0.numberOfLines = 2
     }
     
-    lazy var lightView = TrafficLightView()
+    lazy var lightView = TrafficLightView(lights: [
+        LightModel(color: .red, duration: 4),
+        LightModel(color: .orange, duration: 1),
+        LightModel(color: .green, duration: 4)
+    ]).configure {
+        $0.startAnimating()
+    }
     
     lazy var stackView = UIStackView(arrangedSubviews: [brandLabel, lightView]).configure {
         $0.axis = .vertical
@@ -27,10 +37,12 @@ class DriveViewController: BaseViewController {
         $0.distribution = .fill
     }
     
+    // MARK: - Lifecycle methods
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        brandLabel.text = interactor?.brand ?? ""
+        setupBrandLabel()
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -38,6 +50,14 @@ class DriveViewController: BaseViewController {
         
         lightView.stopAnimating()
     }
+    
+    // MARK: - Private methods
+    
+    private func setupBrandLabel() {
+        brandLabel.text = interactor?.brand ?? ""
+    }
+    
+    // MARK: - Setup UI
     
     override func setupView() {
         super.setupView()

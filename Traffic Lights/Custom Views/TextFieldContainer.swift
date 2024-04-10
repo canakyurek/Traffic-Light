@@ -10,9 +10,13 @@ import SnapKit
 
 class TextFieldContainer: UIView {
     
+    // MARK: - Private parameters
+    
     private var normalBorderColor = UIColor.lightGray.cgColor
     private var warningBorderColor = UIColor.red.cgColor
 
+    // MARK: - Lazy variables
+    
     lazy var titleLabel = UILabel().configure {
         $0.font = .systemFont(ofSize: 12, weight: .bold)
     }
@@ -36,6 +40,8 @@ class TextFieldContainer: UIView {
         $0.distribution = .fill
     }
     
+    // MARK: - Inits
+    
     public override init(frame: CGRect) {
         super.init(frame: frame)
         
@@ -45,6 +51,8 @@ class TextFieldContainer: UIView {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    
+    // MARK: - Setup UI
     
     private func setupView() {
         addSubview(stackView)
@@ -57,6 +65,22 @@ class TextFieldContainer: UIView {
         }
     }
     
+    private func showWarningState() {
+        textField.layer.borderColor = warningBorderColor
+        stackView.addArrangedSubview(footerLabel)
+    }
+    
+    private func showNormalState() {
+        footerLabel.removeFromSuperview()
+        textField.layer.borderColor = normalBorderColor
+    }
+}
+
+// MARK: - Exposed methods
+
+extension TextFieldContainer {
+    
+    /// Sets delegate object for UITextField
     public func setDelegate(_ delegate: UITextFieldDelegate) {
         textField.delegate = delegate
     }
@@ -73,6 +97,8 @@ class TextFieldContainer: UIView {
         textField.text = text
     }
 
+    /// Checks state of textField
+    /// - Returns true if all checks are satisfied
     public func checkState() -> Bool {
         guard let text = textField.text else {
             showNormalState()
@@ -82,21 +108,12 @@ class TextFieldContainer: UIView {
             footerLabel.text = Constants.TextContainer.emptyTextMessage
             showWarningState()
             return false
-        } else if text.count < 3 {
+        } else if text.trimmingCharacters(in: .whitespacesAndNewlines).count < 3 {
             footerLabel.text = Constants.TextContainer.min3CharMessage
+            showWarningState()
             return false
         }
         showNormalState()
         return true
-    }
-    
-    private func showWarningState() {
-        textField.layer.borderColor = warningBorderColor
-        stackView.addArrangedSubview(footerLabel)
-    }
-    
-    private func showNormalState() {
-        footerLabel.removeFromSuperview()
-        textField.layer.borderColor = normalBorderColor
     }
 }

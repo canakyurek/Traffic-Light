@@ -10,8 +10,12 @@ import SnapKit
 
 class BrandViewController: BaseViewController {
     
+    // MARK: - VIP cycle elements
+    
     var interactor: (BrandBusinessLogic & BrandDataStore)?
     var router: (BrandRoutingLogic & BrandDataPassing)?
+    
+    // MARK: - Lazy variables
     
     lazy var brandTextFieldContainer = TextFieldContainer().configure {
         $0.setPlaceholder(Constants.BrandView.placeholderTitle)
@@ -30,10 +34,7 @@ class BrandViewController: BaseViewController {
         )
     }
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-    }
+    // MARK: - Setup UI
     
     override func setupView() {
         super.setupView()
@@ -54,12 +55,16 @@ class BrandViewController: BaseViewController {
         }
     }
     
+    // MARK: - Selector
+    
     @objc private func actionButtonAction(_ sender: UIButton) {
         if brandTextFieldContainer.checkState() {
             router?.routeToDriving(withBrand: brandTextFieldContainer.textField.text)
         }
     }
 }
+
+// MARK: - UITextField delegate
 
 extension BrandViewController: UITextFieldDelegate {
     func textFieldDidEndEditing(_ textField: UITextField) {

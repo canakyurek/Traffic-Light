@@ -25,6 +25,7 @@
 		05E6524C2BC689DE0050B68D /* DriveRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05E6524B2BC689DE0050B68D /* DriveRouter.swift */; };
 		05E6524E2BC689E60050B68D /* DriveConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05E6524D2BC689E60050B68D /* DriveConfigurator.swift */; };
 		05E652522BC691AF0050B68D /* TrafficLightView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05E652512BC691AF0050B68D /* TrafficLightView.swift */; };
+		05E652542BC6B52A0050B68D /* LightModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05E652532BC6B52A0050B68D /* LightModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +48,7 @@
 		05E6524B2BC689DE0050B68D /* DriveRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriveRouter.swift; sourceTree = "<group>"; };
 		05E6524D2BC689E60050B68D /* DriveConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriveConfigurator.swift; sourceTree = "<group>"; };
 		05E652512BC691AF0050B68D /* TrafficLightView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrafficLightView.swift; sourceTree = "<group>"; };
+		05E652532BC6B52A0050B68D /* LightModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,13 +84,13 @@
 			children = (
 				05E6521B2BC677560050B68D /* AppDelegate.swift */,
 				05E6521D2BC677560050B68D /* SceneDelegate.swift */,
+				05E6523A2BC6846E0050B68D /* Constants.swift */,
 				05E652502BC689F80050B68D /* Scenes */,
 				05E652242BC677570050B68D /* Assets.xcassets */,
 				05E652292BC677570050B68D /* Info.plist */,
-				05E6523C2BC6858B0050B68D /* Protocol */,
 				05E6523E2BC6859E0050B68D /* Custom Views */,
+				05E6523C2BC6858B0050B68D /* Protocol */,
 				05E6523D2BC685970050B68D /* Extensions */,
-				05E6523A2BC6846E0050B68D /* Constants.swift */,
 			);
 			path = "Traffic Lights";
 			sourceTree = "<group>";
@@ -113,7 +115,7 @@
 			isa = PBXGroup;
 			children = (
 				05E652342BC67D1E0050B68D /* TextFieldContainer.swift */,
-				05E652512BC691AF0050B68D /* TrafficLightView.swift */,
+				05E652552BC6B53A0050B68D /* TrafficLight */,
 			);
 			path = "Custom Views";
 			sourceTree = "<group>";
@@ -148,6 +150,15 @@
 				05E6524F2BC689EA0050B68D /* Drive */,
 			);
 			path = Scenes;
+			sourceTree = "<group>";
+		};
+		05E652552BC6B53A0050B68D /* TrafficLight */ = {
+			isa = PBXGroup;
+			children = (
+				05E652512BC691AF0050B68D /* TrafficLightView.swift */,
+				05E652532BC6B52A0050B68D /* LightModel.swift */,
+			);
+			path = TrafficLight;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -226,6 +237,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				05E6524E2BC689E60050B68D /* DriveConfigurator.swift in Sources */,
+				05E652542BC6B52A0050B68D /* LightModel.swift in Sources */,
 				05E652202BC677560050B68D /* BrandViewController.swift in Sources */,
 				05E6524C2BC689DE0050B68D /* DriveRouter.swift in Sources */,
 				05E652522BC691AF0050B68D /* TrafficLightView.swift in Sources */,
