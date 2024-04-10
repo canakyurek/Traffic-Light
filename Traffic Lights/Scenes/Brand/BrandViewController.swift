@@ -10,6 +10,9 @@ import SnapKit
 
 class BrandViewController: BaseViewController {
     
+    var interactor: (BrandBusinessLogic & BrandDataStore)?
+    var router: (BrandRoutingLogic & BrandDataPassing)?
+    
     lazy var brandTextFieldContainer = TextFieldContainer().configure {
         $0.setPlaceholder(Constants.BrandView.placeholderTitle)
         $0.setDelegate(self)
@@ -30,12 +33,12 @@ class BrandViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        setupView()
     }
     
-    private func setupView() {
+    override func setupView() {
+        super.setupView()
+        
         title = Constants.BrandView.title
-        view.backgroundColor = .white
         
         view.addSubview(brandTextFieldContainer)
         brandTextFieldContainer.snp.makeConstraints { make in
@@ -52,7 +55,9 @@ class BrandViewController: BaseViewController {
     }
     
     @objc private func actionButtonAction(_ sender: UIButton) {
-        _ = brandTextFieldContainer.checkState()
+        if brandTextFieldContainer.checkState() {
+            router?.routeToDriving()
+        }
     }
 }
 

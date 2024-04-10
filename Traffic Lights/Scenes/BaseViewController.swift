@@ -7,16 +7,22 @@
 
 import UIKit
 
+
 class BaseViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         handleKeyboard()
+        setupView()
+    }
+    
+    func setupView() {
+        view.backgroundColor = .systemBackground
     }
     
     // MARK: Hide Keyboard
-    public func handleKeyboard() {
+    private func handleKeyboard() {
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(hideKeyboard))
         tapGesture.cancelsTouchesInView = false
         view.addGestureRecognizer(tapGesture)
