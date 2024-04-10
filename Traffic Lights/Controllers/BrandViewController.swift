@@ -12,6 +12,7 @@ class BrandViewController: BaseViewController {
     
     lazy var brandTextFieldContainer = TextFieldContainer().configure {
         $0.setPlaceholder(Constants.BrandView.placeholderTitle)
+        $0.setDelegate(self)
     }
     
     lazy var actionButton = UIButton().configure {
@@ -19,6 +20,11 @@ class BrandViewController: BaseViewController {
         $0.titleLabel?.font = .systemFont(ofSize: 16, weight: .bold)
         $0.layer.cornerRadius = 8
         $0.backgroundColor = .blue
+        $0.addTarget(
+            self,
+            action: #selector(actionButtonAction(_:)),
+            for: .touchUpInside
+        )
     }
 
     override func viewDidLoad() {
@@ -35,7 +41,6 @@ class BrandViewController: BaseViewController {
         brandTextFieldContainer.snp.makeConstraints { make in
             make.top.equalTo(view.safeAreaLayoutGuide).inset(24)
             make.leading.trailing.equalToSuperview().inset(16)
-            make.height.equalTo(64)
         }
         
         view.addSubview(actionButton)
@@ -45,5 +50,14 @@ class BrandViewController: BaseViewController {
             make.height.equalTo(48)
         }
     }
+    
+    @objc private func actionButtonAction(_ sender: UIButton) {
+        _ = brandTextFieldContainer.checkState()
+    }
 }
 
+extension BrandViewController: UITextFieldDelegate {
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        _ = brandTextFieldContainer.checkState()
+    }
+}

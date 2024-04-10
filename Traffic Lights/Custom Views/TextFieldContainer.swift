@@ -51,6 +51,14 @@ class TextFieldContainer: UIView {
         stackView.snp.makeConstraints { make in
             make.directionalEdges.equalToSuperview().inset(8)
         }
+        
+        textField.snp.makeConstraints { make in
+            make.height.equalTo(50)
+        }
+    }
+    
+    public func setDelegate(_ delegate: UITextFieldDelegate) {
+        textField.delegate = delegate
     }
     
     public func setTitle(_ text: String) {
@@ -65,19 +73,21 @@ class TextFieldContainer: UIView {
         textField.text = text
     }
 
-    public func setStates() {
+    public func checkState() -> Bool {
         guard let text = textField.text else {
             showNormalState()
-            return
+            return true
         }
         if text.isEmpty {
             footerLabel.text = Constants.TextContainer.emptyTextMessage
             showWarningState()
+            return false
         } else if text.count < 3 {
             footerLabel.text = Constants.TextContainer.min3CharMessage
-        } else {
-            showNormalState()
+            return false
         }
+        showNormalState()
+        return true
     }
     
     private func showWarningState() {
