@@ -9,9 +9,9 @@ import Foundation
 
 struct Constants {
     struct BrandView {
-        static let title = "Set Brand Before Driving"
+        static let title = "Set Model Before Driving"
         static let actionButtonTitle = "Start Driving"
-        static let placeholderTitle = "Enter car brand"
+        static let placeholderTitle = "Enter car model"
     }
     
     struct DriveView {
