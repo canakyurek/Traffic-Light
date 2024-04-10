@@ -1,4 +1,4 @@
-# Traffic-Light
+# Traffic Light
 An iOS application written in Swift to get car model and present traffic light animation to the user
 
 # Technical Details
