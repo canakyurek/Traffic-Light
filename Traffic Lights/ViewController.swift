@@ -11,11 +11,11 @@ import SnapKit
 class ViewController: BaseViewController {
     
     lazy var brandTextFieldContainer = TextFieldContainer().configure {
-        $0.setPlaceholder("Enter car brand")
+        $0.setPlaceholder(Constants.BrandView.placeholderTitle)
     }
     
     lazy var actionButton = UIButton().configure {
-        $0.setTitle("Start Driving", for: .normal)
+        $0.setTitle(Constants.BrandView.actionButtonTitle, for: .normal)
         $0.titleLabel?.font = .systemFont(ofSize: 16, weight: .bold)
         $0.layer.cornerRadius = 8
         $0.backgroundColor = .blue
@@ -23,12 +23,12 @@ class ViewController: BaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+
         setupView()
     }
     
     private func setupView() {
-        title = "Set Brand Before Driving"
+        title = Constants.BrandView.title
         view.backgroundColor = .white
         
         view.addSubview(brandTextFieldContainer)

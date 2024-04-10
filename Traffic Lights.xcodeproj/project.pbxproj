@@ -16,6 +16,7 @@
 		05E652352BC67D1E0050B68D /* TextFieldContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05E652342BC67D1E0050B68D /* TextFieldContainer.swift */; };
 		05E652372BC680F40050B68D /* UITextField+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05E652362BC680F40050B68D /* UITextField+Ext.swift */; };
 		05E652392BC6823B0050B68D /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05E652382BC6823B0050B68D /* BaseViewController.swift */; };
+		05E6523B2BC6846E0050B68D /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05E6523A2BC6846E0050B68D /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,7 @@
 		05E652342BC67D1E0050B68D /* TextFieldContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldContainer.swift; sourceTree = "<group>"; };
 		05E652362BC680F40050B68D /* UITextField+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Ext.swift"; sourceTree = "<group>"; };
 		05E652382BC6823B0050B68D /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		05E6523A2BC6846E0050B68D /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +73,7 @@
 				05E652342BC67D1E0050B68D /* TextFieldContainer.swift */,
 				05E652362BC680F40050B68D /* UITextField+Ext.swift */,
 				05E652382BC6823B0050B68D /* BaseViewController.swift */,
+				05E6523A2BC6846E0050B68D /* Constants.swift */,
 			);
 			path = "Traffic Lights";
 			sourceTree = "<group>";
@@ -157,6 +160,7 @@
 				05E652332BC67CE60050B68D /* Configurable.swift in Sources */,
 				05E652392BC6823B0050B68D /* BaseViewController.swift in Sources */,
 				05E6521E2BC677560050B68D /* SceneDelegate.swift in Sources */,
+				05E6523B2BC6846E0050B68D /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

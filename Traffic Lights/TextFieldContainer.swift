@@ -71,10 +71,10 @@ class TextFieldContainer: UIView {
             return
         }
         if text.isEmpty {
-            footerLabel.text = "This field cannot be blank"
+            footerLabel.text = Constants.TextContainer.emptyTextMessage
             showWarningState()
         } else if text.count < 3 {
-            footerLabel.text = "This field should be at least 3 characters long."
+            footerLabel.text = Constants.TextContainer.min3CharMessage
         } else {
             showNormalState()
         }
