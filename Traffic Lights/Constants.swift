@@ -14,6 +14,10 @@ struct Constants {
         static let placeholderTitle = "Enter car brand"
     }
     
+    struct DriveView {
+        static let title = "Drive"
+    }
+    
     struct TextContainer {
         static let emptyTextMessage = "This field cannot be blank"
         static let min3CharMessage = "This field should be at least 3 characters long."

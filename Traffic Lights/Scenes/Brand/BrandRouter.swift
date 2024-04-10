@@ -8,7 +8,7 @@
 import Foundation
 
 protocol BrandRoutingLogic {
-    func routeToDriving()
+    func routeToDriving(withBrand brand: String?)
 }
 
 protocol BrandDataPassing {
@@ -22,9 +22,9 @@ class BrandRouter: BrandDataPassing {
 }
 
 extension BrandRouter: BrandRoutingLogic {
-    func routeToDriving() {
+    func routeToDriving(withBrand brand: String?) {
         let vc = DriveConfigurator.viewController
-        vc.router?.dataStore?.brand = dataStore?.brand
+        vc.router?.dataStore?.brand = brand
         viewController?.show(vc, sender: nil)
     }
 }

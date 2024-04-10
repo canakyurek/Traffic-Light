@@ -56,7 +56,7 @@ class BrandViewController: BaseViewController {
     
     @objc private func actionButtonAction(_ sender: UIButton) {
         if brandTextFieldContainer.checkState() {
-            router?.routeToDriving()
+            router?.routeToDriving(withBrand: brandTextFieldContainer.textField.text)
         }
     }
 }

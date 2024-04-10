@@ -17,6 +17,7 @@ class BrandConfigurator {
         viewController.router = router
         
         router.viewController = viewController
+        router.dataStore = interactor
         
         return viewController
     }
