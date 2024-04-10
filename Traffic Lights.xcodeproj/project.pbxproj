@@ -10,10 +10,12 @@
 		05E6521C2BC677560050B68D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05E6521B2BC677560050B68D /* AppDelegate.swift */; };
 		05E6521E2BC677560050B68D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05E6521D2BC677560050B68D /* SceneDelegate.swift */; };
 		05E652202BC677560050B68D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05E6521F2BC677560050B68D /* ViewController.swift */; };
-		05E652232BC677560050B68D /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 05E652222BC677560050B68D /* Base */; };
 		05E652252BC677570050B68D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 05E652242BC677570050B68D /* Assets.xcassets */; };
-		05E652282BC677570050B68D /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 05E652272BC677570050B68D /* Base */; };
 		05E652312BC67A400050B68D /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 05E652302BC67A400050B68D /* SnapKit */; };
+		05E652332BC67CE60050B68D /* Configurable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05E652322BC67CE60050B68D /* Configurable.swift */; };
+		05E652352BC67D1E0050B68D /* TextFieldContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05E652342BC67D1E0050B68D /* TextFieldContainer.swift */; };
+		05E652372BC680F40050B68D /* UITextField+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05E652362BC680F40050B68D /* UITextField+Ext.swift */; };
+		05E652392BC6823B0050B68D /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05E652382BC6823B0050B68D /* BaseViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,10 +23,12 @@
 		05E6521B2BC677560050B68D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		05E6521D2BC677560050B68D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		05E6521F2BC677560050B68D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		05E652222BC677560050B68D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		05E652242BC677570050B68D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		05E652272BC677570050B68D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		05E652292BC677570050B68D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		05E652322BC67CE60050B68D /* Configurable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configurable.swift; sourceTree = "<group>"; };
+		05E652342BC67D1E0050B68D /* TextFieldContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldContainer.swift; sourceTree = "<group>"; };
+		05E652362BC680F40050B68D /* UITextField+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Ext.swift"; sourceTree = "<group>"; };
+		05E652382BC6823B0050B68D /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,10 +65,12 @@
 				05E6521B2BC677560050B68D /* AppDelegate.swift */,
 				05E6521D2BC677560050B68D /* SceneDelegate.swift */,
 				05E6521F2BC677560050B68D /* ViewController.swift */,
-				05E652212BC677560050B68D /* Main.storyboard */,
 				05E652242BC677570050B68D /* Assets.xcassets */,
-				05E652262BC677570050B68D /* LaunchScreen.storyboard */,
 				05E652292BC677570050B68D /* Info.plist */,
+				05E652322BC67CE60050B68D /* Configurable.swift */,
+				05E652342BC67D1E0050B68D /* TextFieldContainer.swift */,
+				05E652362BC680F40050B68D /* UITextField+Ext.swift */,
+				05E652382BC6823B0050B68D /* BaseViewController.swift */,
 			);
 			path = "Traffic Lights";
 			sourceTree = "<group>";
@@ -134,8 +140,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				05E652252BC677570050B68D /* Assets.xcassets in Resources */,
-				05E652282BC677570050B68D /* Base in Resources */,
-				05E652232BC677560050B68D /* Base in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -147,31 +151,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				05E652202BC677560050B68D /* ViewController.swift in Sources */,
+				05E652372BC680F40050B68D /* UITextField+Ext.swift in Sources */,
+				05E652352BC67D1E0050B68D /* TextFieldContainer.swift in Sources */,
 				05E6521C2BC677560050B68D /* AppDelegate.swift in Sources */,
+				05E652332BC67CE60050B68D /* Configurable.swift in Sources */,
+				05E652392BC6823B0050B68D /* BaseViewController.swift in Sources */,
 				05E6521E2BC677560050B68D /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		05E652212BC677560050B68D /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				05E652222BC677560050B68D /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		05E652262BC677570050B68D /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				05E652272BC677570050B68D /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		05E6522A2BC677570050B68D /* Debug */ = {
@@ -305,9 +294,7 @@
 				INFOPLIST_FILE = "Traffic Lights/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -333,9 +320,7 @@
 				INFOPLIST_FILE = "Traffic Lights/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
