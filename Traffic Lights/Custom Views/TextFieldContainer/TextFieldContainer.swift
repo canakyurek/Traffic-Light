@@ -12,8 +12,7 @@ class TextFieldContainer: UIView {
     
     // MARK: - Private parameters
     
-    private var normalBorderColor = UIColor.lightGray.cgColor
-    private var warningBorderColor = UIColor.red.cgColor
+    let viewModel = TextFieldContainerViewModel()
 
     // MARK: - Lazy variables
     
@@ -25,8 +24,9 @@ class TextFieldContainer: UIView {
         $0.setLeftPaddingPoints(8)
         $0.setRightPaddingPoints(8)
         $0.layer.borderWidth = 1
-        $0.layer.borderColor = normalBorderColor
+        $0.layer.borderColor = viewModel.normalBorderColor
         $0.layer.cornerRadius = 8
+        $0.delegate = self
     }
     
     lazy var footerLabel = UILabel().configure {
@@ -66,24 +66,19 @@ class TextFieldContainer: UIView {
     }
     
     private func showWarningState() {
-        textField.layer.borderColor = warningBorderColor
+        textField.layer.borderColor = viewModel.warningBorderColor
         stackView.addArrangedSubview(footerLabel)
     }
     
     private func showNormalState() {
         footerLabel.removeFromSuperview()
-        textField.layer.borderColor = normalBorderColor
+        textField.layer.borderColor = viewModel.normalBorderColor
     }
 }
 
 // MARK: - Exposed methods
 
 extension TextFieldContainer {
-    
-    /// Sets delegate object for UITextField
-    public func setDelegate(_ delegate: UITextFieldDelegate) {
-        textField.delegate = delegate
-    }
     
     public func setTitle(_ text: String) {
         titleLabel.text = text
@@ -96,24 +91,26 @@ extension TextFieldContainer {
     public func setText(_ text: String) {
         textField.text = text
     }
-
-    /// Checks state of textField
-    /// - Returns true if all checks are satisfied
+    
     public func checkState() -> Bool {
-        guard let text = textField.text else {
+        if viewModel.checkEmpty(textField.text ?? "") {
+            showWarningState()
+            footerLabel.text = viewModel.emptyTextFieldErrorMessage
+            return false
+        } else if viewModel.checkMinCharacterLimit(textField.text ?? "") == false {
+            showWarningState()
+            footerLabel.text = viewModel.minCharacterErrorMessage
+            return false
+        } else {
             showNormalState()
             return true
         }
-        if text.isEmpty {
-            footerLabel.text = Constants.TextContainer.emptyTextMessage
-            showWarningState()
-            return false
-        } else if text.trimmingCharacters(in: .whitespacesAndNewlines).count < 3 {
-            footerLabel.text = Constants.TextContainer.min3CharMessage
-            showWarningState()
-            return false
-        }
-        showNormalState()
-        return true
+    }
+}
+
+extension TextFieldContainer: UITextFieldDelegate {
+    
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        _ = checkState()
     }
 }

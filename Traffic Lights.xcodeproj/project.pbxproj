@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		05D42CC52BCD588B00FEDE26 /* TextFieldContainerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D42CC42BCD588B00FEDE26 /* TextFieldContainerTests.swift */; };
+		05D42CCC2BCD63F500FEDE26 /* TextFieldContainerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D42CCB2BCD63F500FEDE26 /* TextFieldContainerViewModel.swift */; };
 		05E6521C2BC677560050B68D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05E6521B2BC677560050B68D /* AppDelegate.swift */; };
 		05E6521E2BC677560050B68D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05E6521D2BC677560050B68D /* SceneDelegate.swift */; };
 		05E652202BC677560050B68D /* BrandViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05E6521F2BC677560050B68D /* BrandViewController.swift */; };
@@ -28,7 +30,20 @@
 		05E652542BC6B52A0050B68D /* LightModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05E652532BC6B52A0050B68D /* LightModel.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		05D42CC62BCD588B00FEDE26 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 05E652102BC677560050B68D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 05E652172BC677560050B68D;
+			remoteInfo = "Traffic Lights";
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		05D42CC22BCD588B00FEDE26 /* Traffic LightsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Traffic LightsTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		05D42CC42BCD588B00FEDE26 /* TextFieldContainerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldContainerTests.swift; sourceTree = "<group>"; };
+		05D42CCB2BCD63F500FEDE26 /* TextFieldContainerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldContainerViewModel.swift; sourceTree = "<group>"; };
 		05E652182BC677560050B68D /* Traffic Lights.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Traffic Lights.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		05E6521B2BC677560050B68D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		05E6521D2BC677560050B68D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -52,6 +67,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		05D42CBF2BCD588B00FEDE26 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		05E652152BC677560050B68D /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -63,10 +85,28 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		05D42CC32BCD588B00FEDE26 /* Traffic LightsTests */ = {
+			isa = PBXGroup;
+			children = (
+				05D42CC42BCD588B00FEDE26 /* TextFieldContainerTests.swift */,
+			);
+			path = "Traffic LightsTests";
+			sourceTree = "<group>";
+		};
+		05D42CCD2BCD6FA600FEDE26 /* TextFieldContainer */ = {
+			isa = PBXGroup;
+			children = (
+				05E652342BC67D1E0050B68D /* TextFieldContainer.swift */,
+				05D42CCB2BCD63F500FEDE26 /* TextFieldContainerViewModel.swift */,
+			);
+			path = TextFieldContainer;
+			sourceTree = "<group>";
+		};
 		05E6520F2BC677560050B68D = {
 			isa = PBXGroup;
 			children = (
 				05E6521A2BC677560050B68D /* Traffic Lights */,
+				05D42CC32BCD588B00FEDE26 /* Traffic LightsTests */,
 				05E652192BC677560050B68D /* Products */,
 			);
 			sourceTree = "<group>";
@@ -75,6 +115,7 @@
 			isa = PBXGroup;
 			children = (
 				05E652182BC677560050B68D /* Traffic Lights.app */,
+				05D42CC22BCD588B00FEDE26 /* Traffic LightsTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -114,7 +155,7 @@
 		05E6523E2BC6859E0050B68D /* Custom Views */ = {
 			isa = PBXGroup;
 			children = (
-				05E652342BC67D1E0050B68D /* TextFieldContainer.swift */,
+				05D42CCD2BCD6FA600FEDE26 /* TextFieldContainer */,
 				05E652552BC6B53A0050B68D /* TrafficLight */,
 			);
 			path = "Custom Views";
@@ -164,6 +205,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		05D42CC12BCD588B00FEDE26 /* Traffic LightsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 05D42CCA2BCD588B00FEDE26 /* Build configuration list for PBXNativeTarget "Traffic LightsTests" */;
+			buildPhases = (
+				05D42CBE2BCD588B00FEDE26 /* Sources */,
+				05D42CBF2BCD588B00FEDE26 /* Frameworks */,
+				05D42CC02BCD588B00FEDE26 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				05D42CC72BCD588B00FEDE26 /* PBXTargetDependency */,
+			);
+			name = "Traffic LightsTests";
+			productName = "Traffic LightsTests";
+			productReference = 05D42CC22BCD588B00FEDE26 /* Traffic LightsTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		05E652172BC677560050B68D /* Traffic Lights */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 05E6522C2BC677570050B68D /* Build configuration list for PBXNativeTarget "Traffic Lights" */;
@@ -194,6 +253,10 @@
 				LastSwiftUpdateCheck = 1530;
 				LastUpgradeCheck = 1530;
 				TargetAttributes = {
+					05D42CC12BCD588B00FEDE26 = {
+						CreatedOnToolsVersion = 15.3;
+						TestTargetID = 05E652172BC677560050B68D;
+					};
 					05E652172BC677560050B68D = {
 						CreatedOnToolsVersion = 15.3;
 					};
@@ -216,11 +279,19 @@
 			projectRoot = "";
 			targets = (
 				05E652172BC677560050B68D /* Traffic Lights */,
+				05D42CC12BCD588B00FEDE26 /* Traffic LightsTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		05D42CC02BCD588B00FEDE26 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		05E652162BC677560050B68D /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -232,6 +303,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		05D42CBE2BCD588B00FEDE26 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				05D42CC52BCD588B00FEDE26 /* TextFieldContainerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		05E652142BC677560050B68D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -246,6 +325,7 @@
 				05E652352BC67D1E0050B68D /* TextFieldContainer.swift in Sources */,
 				05E652472BC689BB0050B68D /* BrandConfigurator.swift in Sources */,
 				05E6521C2BC677560050B68D /* AppDelegate.swift in Sources */,
+				05D42CCC2BCD63F500FEDE26 /* TextFieldContainerViewModel.swift in Sources */,
 				05E652332BC67CE60050B68D /* Configurable.swift in Sources */,
 				05E652432BC689AB0050B68D /* BrandInteractor.swift in Sources */,
 				05E652452BC689B40050B68D /* BrandRouter.swift in Sources */,
@@ -258,7 +338,53 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		05D42CC72BCD588B00FEDE26 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 05E652172BC677560050B68D /* Traffic Lights */;
+			targetProxy = 05D42CC62BCD588B00FEDE26 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		05D42CC82BCD588B00FEDE26 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = N3KX8T8CSP;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.canakyurek.Traffic-LightsTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Traffic Lights.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Traffic Lights";
+			};
+			name = Debug;
+		};
+		05D42CC92BCD588B00FEDE26 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = N3KX8T8CSP;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.canakyurek.Traffic-LightsTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Traffic Lights.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Traffic Lights";
+			};
+			name = Release;
+		};
 		05E6522A2BC677570050B68D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -433,6 +559,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		05D42CCA2BCD588B00FEDE26 /* Build configuration list for PBXNativeTarget "Traffic LightsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				05D42CC82BCD588B00FEDE26 /* Debug */,
+				05D42CC92BCD588B00FEDE26 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		05E652132BC677560050B68D /* Build configuration list for PBXProject "Traffic Lights" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

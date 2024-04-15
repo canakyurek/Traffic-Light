@@ -19,7 +19,6 @@ class BrandViewController: BaseViewController {
     
     lazy var brandTextFieldContainer = TextFieldContainer().configure {
         $0.setPlaceholder(Constants.BrandView.placeholderTitle)
-        $0.setDelegate(self)
     }
     
     lazy var actionButton = UIButton().configure {
@@ -61,13 +60,5 @@ class BrandViewController: BaseViewController {
         if brandTextFieldContainer.checkState() {
             router?.routeToDriving(withBrand: brandTextFieldContainer.textField.text)
         }
-    }
-}
-
-// MARK: - UITextField delegate
-
-extension BrandViewController: UITextFieldDelegate {
-    func textFieldDidEndEditing(_ textField: UITextField) {
-        _ = brandTextFieldContainer.checkState()
     }
 }

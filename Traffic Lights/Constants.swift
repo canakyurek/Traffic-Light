@@ -20,6 +20,6 @@ struct Constants {
     
     struct TextContainer {
         static let emptyTextMessage = "This field cannot be blank"
-        static let min3CharMessage = "This field should be at least 3 characters long."
+        static let minCharMessage = "This field should be at least 3 characters long."
     }
 }
